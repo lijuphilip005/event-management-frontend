@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getAllSubmissions, approveSubmission } from "../../../src/services/submission.service";
 import Sidebar from "@/src/components/dashboard/Sidebar";
+const url =process.env.NEXT_PUBLIC_API_URL
+
 
 export default function SubmissionsPage() {
   const [submissions, setSubmissions] = useState<any[]>([]);
@@ -70,7 +72,7 @@ export default function SubmissionsPage() {
 
                 <td className="py-4">
                   <img
-                    src={`http://localhost:3001/uploads/${s.photo}`}
+                    src={`${url}/uploads/${s.photo}`}
                     style={{
                       width: "150px",
                       height: "150px",
