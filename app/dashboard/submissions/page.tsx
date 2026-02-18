@@ -72,7 +72,7 @@ export default function SubmissionsPage() {
 
                 <td className="py-4">
                   <img
-                    src={`${url}/uploads/${s.photo}`}
+                    src={`${url}uploads/${s.photo}`}
                     style={{
                       width: "150px",
                       height: "150px",
