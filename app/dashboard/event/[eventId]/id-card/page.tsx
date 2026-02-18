@@ -8,6 +8,7 @@ export default function IdCardPage() {
   const { eventId } = useParams();
   const [users, setUsers] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const url =process.env.NEXT_PUBLIC_API_URL
 
   const loadApproved = async () => {
     setLoading(true);
@@ -51,7 +52,7 @@ export default function IdCardPage() {
 
            
             <img
-              src={`http://localhost:3001/uploads/${u.photo}`}
+              src={`${url}/uploads/${u.photo}`}
               style={{
                 position: "absolute",
                 top: "33%",
